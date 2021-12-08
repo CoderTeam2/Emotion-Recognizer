@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js" target="_blank"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Emotion Identifier</title>
+</head>
+
+<body>
+    <center>
+        <div id="heading" style="font-size:30px; background-color:skyblue;">
+            <h1>Emotion Identifier</h1>
+            <br>
+            <span>😊</span>
+            <span>😉</span>
+            <span>😀</span>
+            <span>😤</span>
+            <span>😎</span>
+            <span>🤯</span>
+            <span>😱</span>
+        </div><br>
+
+        <p style="font-size:20px;">This webapp is capable of recognizing you emotions with you selfie! Please take your
+            selfie with "Take Selfie"
+            button and get started!
+            <br>
+            <br>
+            <b style="color: chartreuse;">Are you HAPPY ?</b><br>
+            <b style="color: blueviolet;">Are you SAD ?</b><br>
+            <b style="color: red;">Are you ANGRY ?!</b><br>
+            <b style="color: yellow;">Are you Surprised ?!</b><br>
+        </p>
+        <br><br>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" id="webcam_div">
+            <label>Here is you webcam view :-</label><br>
+            <div id="webcam"></div>
+            <br>
+            <button onclick="selfie()" class="btn btn-info">Take Selfie</button>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" id="pridiction_div">
+            <br>
+            <label>Pridiction 1 :-</label><br>
+            <p id="pridiction_img"></p>
+            <p id="prdiction_name"></p><br><br>
+            <label>Pridiction 2 :-</label><br>
+            <p id="pridiction_img2"></p>
+            <p id="prdiction_name3"></p>
+        </div>
+
+        <div id="preview_div">
+            <label>Here is you selfie prefie :-</label>
+            <div id="preview"></div>
+            <br>
+            <button onclick="check()" class="btn btn-success">Identify Emotion</button>
+        </div>
+    </center>
+    <script src="main.js"></script>
+</body>
+
+</html>
